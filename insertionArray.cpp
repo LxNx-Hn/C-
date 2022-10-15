@@ -1,45 +1,27 @@
 #include <iostream>
 #include <vector>
+
 using namespace std;
-
-void insertion_sort(vector<int>& data)
-{
-	for (int i = 1; i < data.size(); i++)
-	{
-		int key = data[i];
-		int j;
-
-		for (j = i - 1; j >= 0 && data[j] > key; j--)
-		{
-			data[j + 1] = data[j];
-		}
-
-		data[++j] = key;
-	}
-}
 
 int main()
 {
-	vector<int> vec;
+	int j;
+	vector<int> data{ 4,5,6,1,2 };
 
-	for (int i = 10; i > 0; i--)
+	for (int i = 0; i < data.size()-1; i++)
 	{
-		vec.push_back(i);
+		j = i;
+		while (j >= 0 && data[j] > data[j + 1])
+		{
+			int temp = data[j];
+			data[j] = data[j + 1];
+			data[j + 1] = temp;
+			j--;
+		}
+	}
+	for (int i = 0; i < data.size(); i++)
+	{
+		cout << data[i] << " ";
 	}
 
-	for (int i = 0; i < vec.size(); i++)
-	{
-		cout << vec[i] << ", ";
-	}
-	cout << endl << endl;
-
-	insertion_sort(vec);
-
-	for (int i = 0; i < vec.size(); i++)
-	{
-		cout << vec[i] << ", ";
-	}
-	cout << endl;
-
-	return 0;
 }

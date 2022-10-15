@@ -5,6 +5,7 @@ int main () {
     while(true){
 cout<<"진행=1 중지=2   : ";
 int m;
+
 cin>>m;
 if(m==1){
     cout<<"별의 개수를 입력해주세요: ";
@@ -30,12 +31,13 @@ else{ cout<<"유효한 숫자값을 입력해주세요"<<endl;}
 
 }
 
-
-
-//int recursionStar (int n){
+/*
+int i=0;
+int recursionStar (int n){
     if(i=<n)return 1;
     else{
         cout<<"*";
-        i++
+        
     }
 }
+*/

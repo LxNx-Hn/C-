@@ -1,11 +1,14 @@
 {
     "tasks": [
         {
-            "label": "save and compile for C++",
-            "command": "g++",
+            "type": "cppbuild",
+            "label": "C/C++: clang++ 활성 파일 빌드",
+            "command": "/usr/bin/clang++",
             "args": [
-                "${fileDirname}\\**.cpp",
+                "-fcolor-diagnostics",
+                "-fansi-escape-codes",
                 "-g",
+                "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
