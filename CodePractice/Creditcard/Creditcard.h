@@ -1,26 +1,27 @@
-#ifndef CREDIT_CARD_H
-#define DREDIT_CARD_H
-#include <string>
-#include<iostream>
+#ifndef CREDIT_CARD_H                           // avoid repeated expansion
+#define CREDIT_CARD_H
 
-class CreditCard{
-    public:
-    CreditCard(const std::string& no,const std::string& nm,int lim,double bal =0); //생성자
+#include <string>				// provides string
+#include <iostream>				// provides ostream
 
-std::string getNumber()const {return number;}
-std::string getName()const {return name;}
-double getBalance()const{return balance;} //왜 const가 항상 선언되는가
-int getlimit()const {return limit;}
+class CreditCard {
+public:
+  CreditCard(const std::string& no,		// constructor
+  	const std::string& nm, int lim, double bal=0);
+  						// accessor functions
+  std::string   getNumber() const	{ return number; }
+  std::string   getName() const		{ return name; }
+  double   	getBalance() const	{ return balance; }
+  int      	getLimit() const	{ return limit; }
 
-bool chargelt(double price);
-void makePayment(double Payment);
-private:
-std::string number;
-std::string name;
-int limit;
-double balance;
-
+  bool chargeIt(double price); 			// make a charge 
+  void makePayment(double payment);		// make a payment
+private:                                	// private member data
+  std::string   number;				// credit card number
+  std::string   name;				// card owner's name
+  int       	limit;				// credit limit
+  double    	balance;			// credit card balance
 };
-
-
+  						// print card information
+std::ostream& operator<<(std::ostream& out, const CreditCard& c);
 #endif
