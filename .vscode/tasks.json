@@ -6,7 +6,7 @@
             "command": "/usr/bin/clang++",
             
                 "args": [
-                    "${fileDirname}\\** .cpp",
+                    "${fileDirname}/*.cpp",
                     "-g",
                     "-o",
                     "${fileDirname}/${fileBasenameNoExtension}"
