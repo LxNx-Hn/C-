@@ -1,5 +1,5 @@
 #include <vector>				// provides STL vector
-#include "CreditCard.h"				// provides CreditCard, cout, string
+#include "Creditcard.h"				// provides CreditCard, cout, string
 
 using namespace std;				// make std accessible
 

@@ -1,5 +1,5 @@
 
-#include "CreditCard.h"				// provides CreditCard
+#include "Creditcard.h"				// provides CreditCard
 
 using namespace std;				// make std:: accessible
 						// standard constructor

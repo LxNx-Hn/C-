@@ -4,8 +4,8 @@
 #include <string>
 class Info{
 public:
-Info();
-Info(int a,std::string s);
+Info() { }
+Info(int a,std::string s) { save(a, s); }
 
 public:
 void save(int a,std::string s){age=a;name=s;};
@@ -15,7 +15,5 @@ const int getAge(){return age;};
 private:
 std::string name;
 int age;
-
-
 };
 #endif
