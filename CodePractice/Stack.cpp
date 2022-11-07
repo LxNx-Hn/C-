@@ -2,33 +2,28 @@
 #include <iostream>
 using namespace std;
 using std::stack;
-stack<int> myStack;
+stack<Save> myStack;
  class Save{
 public:
     int num;
     char name;
-
-    void save (int B,char C){
-        num=B,name=C;
-}
-
-void out() {
-}
+    Save () {}
+    Save (int B,char C){
+        num=B,name=C;}
+void out() {}
 };
-Save::save (int B,char C){
-        num=B,name=C;
-        }
-Save::out() {
+void Save::out() {
     cout<<"이름: "<<name <<"나이"<<num<<endl;
 }
 
 
 int main() {
+    
     int a;char b;
     cout<<"나이,이름을 입력하세요: ";
     cin>>a;
     cin>>b;
-    myStack.push(save(a,b));
+    myStack.push(Save(a,b));
    
 
 
