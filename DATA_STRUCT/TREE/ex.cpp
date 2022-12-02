@@ -10,3 +10,4 @@ int main() {
     T.addRoot();
     cout<< "Tree Size" << T.size() <<endl;
     return 0;
+}

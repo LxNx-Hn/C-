@@ -1,0 +1,23 @@
+1. c,c++ 설치하기
+2.xcode,mingw 같은 컴파일러 설치
+2.launch,tasks.json 복붙하기
+3.코드러너 깔기
+4. 코드러너 함수 설정 해주기
+
+
+/
+*비상용
+코드러너
+settings.json -> code-runner.executorMap에서 $fileName 부분을 *.cpp
+로 바꾸면 디렉토리내 모든 cpp 파일이 컴파일 됨
+
+
+
+//includePATH 오류
+https://kirkim.github.io/etc/2021/05/03/vscode_path.html
+//개발환경 세팅
+https://polarcompass.tistory.com/12
+다중 컴파일
+https://polarcompass.tistory.com/12
+코드러너 함수
+https://blog.naver.com/bin07119/222843422511
