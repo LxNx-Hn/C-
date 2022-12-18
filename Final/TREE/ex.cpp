@@ -32,7 +32,13 @@ void inorderPrint(const LinkedBinaryTree& T, Position& p){
     }
     }
 
-
+int depth(const LinkedBinaryTree& T, const Position& p){
+        if(p.isRoot())
+            return 0;
+        else
+            return 1+depth(T,p.parent());
+    }
+   
 
 int main() {
     LinkedBinaryTree T;
@@ -66,6 +72,7 @@ int main() {
     cout<<endl;
     inorderPrint(T,p);
     cout<<endl;
+    cout<< depth(T,p);
 
     return 0;
 }

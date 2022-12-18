@@ -13,12 +13,7 @@ public:
     void addRoot();
     void expandExternal(const Position& p);
     Position removeAboveExternal(const Position& p);
-    int depth(Node* v, const Position& p){
-        if(p.isRoot())
-            return 0;
-        else
-            return 1+depth(v,p.parent());
-    }
+    
 protected:
     void preorder(Node* v, PositionList& pl) const;
 private:
