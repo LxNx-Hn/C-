@@ -1,3 +1,4 @@
+/* 
 #include string;
 #include<iostream>
 using namespace std;
@@ -30,3 +31,4 @@ void LinkedQueue::enqueue(const Elem& e){
     n++;
 }
 void LinkedQueue::dequeue(){C.remove(); n--;}
+ */
